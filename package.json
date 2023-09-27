@@ -1,15 +1,9 @@
 {
   "name": "@hdyniu/gi",
   "version": "1.0.0",
-  "description": "💡 Simplify Git commands with custom shortcuts",
+  "description": "💡 Abbreviation of some commonly used commands",
   "bin": {
-    "gcl": "./bin/index.js",
-    "gp": "./bin/index.js",
-    "gpu": "./bin/index.js",
-    "gm": "./bin/index.js",
-    "gc": "./bin/index.js",
-    "gcb": "./bin/index.js",
-    "gco": "./bin/index.js"
+    "gip": "./bin/gip.js"
   },
   "main": "index.js",
   "devDependencies": {},
