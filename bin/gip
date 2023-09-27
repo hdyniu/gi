@@ -3,13 +3,27 @@
 const { execSync } = require('child_process');
 const clipboardy = require('clipboardy');
 const { log } = require("../utils");
+const os = require('os');
+const _platform = os.platform();
 
-const gipCommand = `ipconfig getifaddr en0`;
+let gipCommand,
+  errMsg;
+if (_platform === 'darwin') {
+  gipCommand = `ipconfig getifaddr en0`;
+} else if (_platform === 'win32') {
+  errMsg = 'windows 系统正在开发';
+  const _test = execSync(`ipconfig`, { encoding: 'utf-8' });
+  const _test_ipv4 = execSync(`ipconfig | findstr IPv4`, { encoding: 'utf-8' });
+  log.log(_test);
+  log.log(_test_ipv4);
+} else {
+  errMsg = '暂不支持该操作系统';
+}
 
-try {
+if (gipCommand) {
   const output = execSync(gipCommand, { encoding: 'utf-8' });
   clipboardy.writeSync(output.trim());
   log.success(`your ip address is ${output.trim()} 已经复制到剪切板`);
-} catch (error) {
-  console.error('Error:', error.message);
+} else {
+  log.err(errMsg);
 }
