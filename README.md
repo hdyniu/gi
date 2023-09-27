@@ -1,5 +1,5 @@
 # gi
-💡 Some commonly used commands
+💡 Abbreviations for some commonly used commands
 
 ## Feature
 

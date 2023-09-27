@@ -1,7 +1,7 @@
 {
   "name": "@hdyniu/gi",
   "version": "1.0.0",
-  "description": "💡 Abbreviation of some commonly used commands",
+  "description": "💡 Abbreviations for some commonly used commands",
   "bin": {
     "gip": "./bin/gip.js"
   },
