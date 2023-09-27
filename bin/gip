@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+const { execSync } = require('child_process');
+const clipboardy = require('clipboardy');
+const { log } = require("../utils");
+
+const gipCommand = `ipconfig getifaddr en0`;
+
+try {
+  const output = execSync(gipCommand, { encoding: 'utf-8' });
+  clipboardy.writeSync(output.trim());
+  log.success(`your ip address is ${output.trim()} 已经复制到剪切板`);
+} catch (error) {
+  console.error('Error:', error.message);
+}

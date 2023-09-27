@@ -3,9 +3,8 @@
   "version": "1.0.1",
   "description": "💡 Abbreviations for some commonly used commands",
   "bin": {
-    "gip": "./bin/gip.js"
+    "gip": "./bin/gip"
   },
-  "main": "index.js",
   "devDependencies": {},
   "scripts": {
     "publish": "npm publish --access public"
@@ -24,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/hdyniu/gi/issues"
   },
-  "homepage": "https://github.com/hdyniu/gi#readme"
+  "homepage": "https://github.com/hdyniu/gi#readme",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "clipboardy": "^2.3.0"
+  }
 }
