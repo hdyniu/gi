@@ -3,8 +3,7 @@
 
 ## Feature
 
-- [x] `gip`: 执行 `ipconfig getifaddr en0` 命令，获取本机当前IP。
-
+- [x] `gip`: 执行 `ipconfig getifaddr en0` 命令，获取本机当前IP。[todo:自动复制到剪贴板]
 
 ## Usage
 
